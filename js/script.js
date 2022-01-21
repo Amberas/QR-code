@@ -1,5 +1,5 @@
 {
-    const $button = document.querySelector(".downloadImage")
+    const $link = document.querySelector(".link")
     let url_str;
     let url;
     let search_params;
@@ -21,13 +21,30 @@
 
     const getImageUrl = () => {
         ImageUrl = `https://res.cloudinary.com/dp8o3bbcj/image/upload/v1642718263/${public_id}.jpg`;
-        console.log(ImageUrl);
-
-        $button.addEventListener('click', (event) => {
-            event.preventDefault();
-        })
+        forceDownload(ImageUrl);
     }
 
+    const forceDownload = (imageUrl) => {
+        let url = $link.getAttribute("data-href");
+        url = imageUrl;
+        let fileName = $link.getAttribute("download");
+        $link.innerText = "Working...";
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.responseType = "blob";
+        xhr.onload = function () {
+            let urlCreator = window.URL || window.webkitURL;
+            let imageUrl = urlCreator.createObjectURL(this.response);
+            let tag = document.createElement('a');
+            tag.href = imageUrl;
+            tag.download = fileName;
+            document.body.appendChild(tag);
+            tag.click();
+            document.body.removeChild(tag);
+            $link.innerText = "Download Image";
+        }
+        xhr.send();
+    }
 
 
     const init = async () => {

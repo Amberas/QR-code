@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body {
+    background-color: #B9F6A3;
+    color: white;
+    font-family: Futura;
+    font-style: normal; 
+    font-size: 4vw; 
+}
+
+.title {
+    font-family: 'Oleo Script', cursive;
+    font-size: 13vw;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.image {
+    display: block;
+    width: 70vw;
+    margin: 0 auto;
+    border: 0.5rem solid white;
+    border-radius: 0.5rem;
+}
+
+.tip {
+    text-align: center;
+    margin-top: 3vh;
+}
+
+
+.background_button {
+    display: block;
+    position: absolute;
+    width: 30vw;
+    height: 2vh;
+    left: 35%;
+    top: 82.7%;
+    background-color: #F6A3B7;
+}
+
+.download {
+    position: relative;
+    display: block;
+    width: 40vw;
+    height: 7vh;
+    margin: 0 auto;
+    border:  0.3rem solid white;
+    margin-top: 3vh;
+    border-radius: 1rem;
+    font-family: futura;
+    font-weight: bold;  
+    color: white;
+    font-size: 5vw;
+    text-decoration: none;
+    text-align: center;
+    line-height: 6vh;
+}
+
+.logo {
+    display: block;
+    width: 25vw;
+    margin: 0 auto;
+    margin-top: 3vh;
+}

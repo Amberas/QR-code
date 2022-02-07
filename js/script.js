@@ -1,5 +1,6 @@
 {
-    const $link = document.querySelector(".link")
+    const $link = document.querySelector(".link");
+    const $image = document.querySelector(".image");
     let url_str;
     let url;
     let search_params;
@@ -21,6 +22,7 @@
 
     const getImageUrl = () => {
         ImageUrl = `https://res.cloudinary.com/dp8o3bbcj/image/upload/v1642718263/${public_id}.jpg`;
+        $image.src = `https://res.cloudinary.com/dp8o3bbcj/image/upload/v1642718263/${public_id}.jpg`;
         forceDownload(ImageUrl);
     }
 

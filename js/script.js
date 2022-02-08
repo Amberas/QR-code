@@ -27,38 +27,37 @@
         forceDownload(ImageUrl);
     }
 
-    const forceDownload = (imageUrl) => {
-        let url = $link.getAttribute("data-href");
-        url = imageUrl;
+    const forceDownload = (ImageUrl) => {
         let fileName = $link.getAttribute("download");
         $link.innerText = "Working...";
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", url, true);
+        xhr.open("GET", ImageUrl, true);
         xhr.responseType = "blob";
         xhr.onload = function () {
             let urlCreator = window.URL || window.webkitURL;
-            let imageUrl = urlCreator.createObjectURL(this.response);
+            let url = urlCreator.createObjectURL(this.response);
             let tag = document.createElement('a');
-            tag.href = imageUrl;
+            tag.href = url;
             tag.download = fileName;
             document.body.appendChild(tag);
             tag.click();
             document.body.removeChild(tag);
             $link.innerText = "Download";
         }
+        xhr.setRequestHeader("cache-control", "no-cache");
         xhr.send();
+        console.log(xhr);
     }
 
     const handleTouch = () => {
-        console.log(ImageUrl);
-        forceDownload(ImageUrl);
+        getImageUrl();
     }
 
 
     const init = async () => {
 
         await getParams();
-        if (ImageUrl) {
+        if (url) {
             $button.addEventListener('touchstart', handleTouch);
         }
 

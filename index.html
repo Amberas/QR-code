@@ -12,15 +12,20 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Hello gorgeous - Smile Safari</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 </head>
 
 <body>
     <main class="main">
         <h1 class="title">Hello gorgeous</h1>
         <img class="image"></img>
-        <p class="tip">Tip: check your downloads folder</p>
-        <span class="background_button"></span>
-        <a  href="#"  data-href='#' download="Image.jpg" onclick='forceDownload(this)' class="download">Download</a >
+        <div class="button_tip_container">
+            <p class="tip">Tip: check your downloads folder</p>
+            <div class="button_container">
+                <span class="background_button"></span>
+                <a href="#" data-href='#' download="Image.jpg" onclick='forceDownload(this)' class="download">Download</a>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <img class="logo" src="assets/logo.png"></img>

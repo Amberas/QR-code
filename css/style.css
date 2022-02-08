@@ -38,14 +38,23 @@ body {
 }
 
 
-.background_button {
+.button_container {
     display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.background_button {
     position: absolute;
     width: 30vw;
     height: 2vh;
-    left: 35%;
-    top: 82.7%;
+    margin-top: 3.5vh;
+    margin-left: 5vw;
     background-color: #F6A3B7;
+}
+
+.download:hover .background_button {
+    background-color: #a75d6e;
 }
 
 .download {
@@ -53,7 +62,6 @@ body {
     display: block;
     width: 40vw;
     height: 7vh;
-    margin: 0 auto;
     border:  0.3rem solid white;
     margin-top: 3vh;
     border-radius: 1rem;
@@ -66,9 +74,101 @@ body {
     line-height: 6vh;
 }
 
+.download:hover {
+    cursor: pointer;
+}
+
 .logo {
     display: block;
     width: 25vw;
     margin: 0 auto;
-    margin-top: 3vh;
+    margin-top: 2.5vh;
+}
+
+@media only screen and (min-height: 700px) {
+    .title {
+        margin-top: 8vh;
+        margin-bottom: 6vh;
+    }
+
+    .logo {
+        margin-top: 8vh;
+    }
+}
+
+
+@media only screen and (min-width: 500px) {
+    .title {
+        margin-top: 3.5vh;
+        margin-bottom: 3.5vh;
+        font-size: 10vw;
+    }
+
+    .image {
+        width: 60vw;
+    }
+
+    .tip {
+        font-size: 3.5vw;
+    }
+
+    .download {
+        font-size: 4vw;
+        width: 30vw;
+    }
+
+    .background_button {
+        width: 24vw;
+        margin-top: 3.5vh;
+        margin-left: 3vw;
+    }
+
+    .logo {
+        width: 15vw;
+        margin-top: 2.5vh;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .title {
+        margin-top: 3.5vh;
+        margin-bottom: 3.5vh;
+        font-size: 10rem;
+    }
+
+    .image {
+        width: 45rem;
+    }
+
+    .button_tip_container {
+        display: grid;
+    }
+
+    .tip {
+        grid-row: 2;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .button_container {
+        grid-row: 1;
+    }
+
+    .download {
+        font-size: 3.5rem;
+        width: 25rem;
+    }
+
+    .background_button {
+        width: 20rem;
+        margin-top: 6rem;
+        margin-left: 2.5rem;
+    }
+
+    .logo {
+        width: 14rem;
+        position: absolute;
+        left: 88%;
+        top: 84%;
+    }
 }

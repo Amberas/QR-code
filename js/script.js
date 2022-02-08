@@ -1,5 +1,5 @@
 {
-    const $link = document.querySelector(".link");
+    const $link = document.querySelector(".download");
     const $image = document.querySelector(".image");
     let url_str;
     let url;

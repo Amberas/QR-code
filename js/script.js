@@ -52,6 +52,7 @@
     const init = async () => {
         await getParams();
         $link.addEventListener('click', forceDownload(url));
+        $link.addEventListener('touchstart', forceDownload(url));
     }
 
     init();

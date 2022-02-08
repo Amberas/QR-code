@@ -43,7 +43,7 @@
             document.body.appendChild(tag);
             tag.click();
             document.body.removeChild(tag);
-            $link.innerText = "Download Image";
+            $link.innerText = "Download";
         }
         xhr.send();
     }
@@ -51,6 +51,7 @@
 
     const init = async () => {
         await getParams();
+        $link.addEventListener('click', forceDownload(url));
     }
 
     init();

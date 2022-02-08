@@ -9,11 +9,64 @@ html{
 }
 
 body {
-    background-color: #B9F6A3;
+    background-color: #F6A3B7;
     color: white;
     font-family: Futura;
     font-style: normal; 
     font-size: 4vw; 
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main{
+    z-index: 10;
+}
+
+.background-waves{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.blue-waves, .purple-waves, .green-waves{
+    position: absolute;
+}
+
+.blue-waves{
+    top: 10vh;
+}
+
+.purple-waves{
+    top: 30vh;
+}
+
+.green-waves{
+    bottom: 0;
+}
+
+.bottom-blue{
+    width: 100vw;
+    height: 40rem;
+    background-color: #A3E3F6;
+    margin-top: -1vw;
+}
+
+.bottom-purple{
+    width: 100vw;
+    height: 80vh;
+    background-color: #BEA3F6;
+    margin-top: -1vw;
+}
+
+.bottom-green{
+    width: 100vw;
+    height: 1rem;
+    background-color: #B9F6A3;
+    margin-top: -1vw;
 }
 
 .title {
@@ -78,56 +131,21 @@ body {
     cursor: pointer;
 }
 
-.logo {
-    display: block;
-    width: 25vw;
-    margin: 0 auto;
-    margin-top: 2.5vh;
+.logo{
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-bottom: 2rem;
 }
 
-@media only screen and (min-height: 700px) {
-    .title {
-        margin-top: 8vh;
-        margin-bottom: 6vh;
-    }
-
-    .logo {
-        margin-top: 8vh;
-    }
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
 }
 
-
-@media only screen and (min-width: 500px) {
-    .title {
-        margin-top: 3.5vh;
-        margin-bottom: 3.5vh;
-        font-size: 10vw;
-    }
-
-    .image {
-        width: 60vw;
-    }
-
-    .tip {
-        font-size: 3.5vw;
-    }
-
-    .download {
-        font-size: 4vw;
-        width: 30vw;
-    }
-
-    .background_button {
-        width: 24vw;
-        margin-top: 3.5vh;
-        margin-left: 3vw;
-    }
-
-    .logo {
-        width: 15vw;
-        margin-top: 2.5vh;
-    }
-}
 
 @media only screen and (min-width: 800px) {
     .title {
@@ -164,11 +182,61 @@ body {
         margin-top: 6rem;
         margin-left: 2.5rem;
     }
+}
+
+@media only screen and (min-width: 700px) {
+    .title {
+        margin-top: 8vh;
+        margin-bottom: 6vh;
+    }
+
+    .footer{
+        width: 100vw;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+    }
 
     .logo {
-        width: 14rem;
         position: absolute;
-        left: 88%;
-        top: 84%;
+        width: 25vw;
+        bottom: 2rem;
+        right: 2rem;
     }
 }
+
+
+@media only screen and (min-width: 500px) {
+    .title {
+        margin-top: 3.5vh;
+        margin-bottom: 3.5vh;
+        font-size: 10vw;
+    }
+
+    .image {
+        width: 60vw;
+    }
+
+    .tip {
+        font-size: 3.5vw;
+    }
+
+    .download {
+        font-size: 4vw;
+        width: 30vw;
+    }
+
+    .background_button {
+        width: 24vw;
+        margin-top: 3.5vh;
+        margin-left: 3vw;
+    }
+
+    .logo {
+        width: 15vw;
+        margin-top: 2.5vh;
+    }
+
+    
+}
+

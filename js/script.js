@@ -1,6 +1,7 @@
 {
     const $link = document.querySelector(".download");
     const $image = document.querySelector(".image");
+    const $button = document.querySelector(".button_container");
     let url_str;
     let url;
     let search_params;
@@ -18,7 +19,7 @@
         } else {
             console.log("no public_id in url");
         }
-    } 
+    }
 
     const getImageUrl = () => {
         ImageUrl = `https://res.cloudinary.com/dp8o3bbcj/image/upload/v1642718263/${public_id}.jpg`;
@@ -48,11 +49,20 @@
         xhr.send();
     }
 
+    const handleTouch = () => {
+        console.log(ImageUrl);
+        forceDownload(ImageUrl);
+    }
+
 
     const init = async () => {
+
         await getParams();
-        $link.addEventListener('click', forceDownload(url));
-        $link.addEventListener('touchstart', forceDownload(url));
+        if (ImageUrl) {
+            $button.addEventListener('touchstart', handleTouch);
+        }
+
+
     }
 
     init();

@@ -85,9 +85,20 @@ body {
     border-radius: 0.5rem;
 }
 
+.flex-icon-tip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+.bulb{
+    height: 3rem;
+    margin-right: 1rem;
+}
+
 .tip {
     text-align: center;
-    margin-top: 3vh;
     font-size: 2.5rem;
 }
 
